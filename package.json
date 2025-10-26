@@ -24,5 +24,8 @@
     "lint": "turbo run lint",
     "codegen": "cd .",
     "generate:oas": "turbo run generate:oas"
-  }
+  },
+  "resolutions": {
+  "zod": "3.22.4"
+}
 }
