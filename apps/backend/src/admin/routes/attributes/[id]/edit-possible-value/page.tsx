@@ -4,7 +4,7 @@ import { useParams, useSearchParams, useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from "zod"
+import z from "zod"
 import { MetadataEditor } from "../../../../components/metadata-editor"
 import { useAttribute } from "../../../../hooks/api/attributes"
 import { useUpdateAttributePossibleValue } from "../../../../hooks/api/attributes"
@@ -35,7 +35,7 @@ const EditPossibleValuePage = () => {
     enabled: !!attributeId,
   })
 
-  const { mutateAsync, isPending } = useUpdateAttributePossibleValue(attributeId!, possibleValueId!) 
+  const { mutateAsync, isPending } = useUpdateAttributePossibleValue(attributeId!, possibleValueId!)
 
   const possibleValue = attribute?.possible_values?.find((pv: { id: string }) => pv.id === possibleValueId)
 

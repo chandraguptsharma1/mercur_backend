@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AdminProductCategory } from "@medusajs/types";
 import { AttributeForm, CreateAttributeFormSchema } from "../components/AttributeForm";
-import { z } from "zod";
+import z from "zod";
 import { mercurQuery } from "../../../lib/client";
 import { attributeQueryKeys } from "../../../hooks/api/attributes";
 

@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { ProductStatus } from '@medusajs/framework/utils'
 import { StepResponse, createStep } from '@medusajs/framework/workflows-sdk'

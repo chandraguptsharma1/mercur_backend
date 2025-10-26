@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 const TaxBreakdownObject = z.object({
   amount: z.number(),

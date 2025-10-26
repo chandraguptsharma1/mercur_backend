@@ -9,7 +9,7 @@ import {
 } from "@medusajs/ui";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import z from "zod";
 import { useEffect, useState } from "react";
 import { AttributeDTO } from "@mercurjs/framework";
 import { AdminUpdateAttribute, CreateAttribute } from "../../../../api/admin/attributes/validators";

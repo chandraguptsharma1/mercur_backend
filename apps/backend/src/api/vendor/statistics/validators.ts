@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 const DAY_MS = 1000 * 60 * 60 * 24
 export type VendorGetStatisticsParamsType = z.infer<

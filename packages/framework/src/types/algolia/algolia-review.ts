@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 export type AlgoliaReview = z.infer<typeof AlgoliaReviewValidator>
 export const AlgoliaReviewValidator = z.object({

@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { applyAndAndOrOperators } from '@medusajs/medusa/api/utils/common-validators/common'
 import { createFindParams } from '@medusajs/medusa/api/utils/validators'

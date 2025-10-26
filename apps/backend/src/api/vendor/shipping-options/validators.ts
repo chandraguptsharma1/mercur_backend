@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { RuleOperator } from '@medusajs/framework/utils'
 import { createFindParams } from '@medusajs/medusa/api/utils/validators'

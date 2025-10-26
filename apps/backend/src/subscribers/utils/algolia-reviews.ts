@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { MedusaContainer } from '@medusajs/framework'
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
@@ -15,8 +15,8 @@ export async function findAndTransformAlgoliaReviews(
     fields: ['*', 'seller.id', 'product.id'],
     filters: ids.length
       ? {
-          id: ids
-        }
+        id: ids
+      }
       : {}
   })
 

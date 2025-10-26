@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { ContainerRegistrationKeys } from '@medusajs/framework/utils'
 import { StepResponse, createStep } from '@medusajs/framework/workflows-sdk'
@@ -91,9 +91,9 @@ export const recalculateOnboardingStep = createStep(
     const sellerService = container.resolve<SellerModuleService>(SELLER_MODULE)
     const updatedOnboarding = onboarding
       ? await sellerService.updateSellerOnboardings({
-          ...toUpdate,
-          id: onboarding.id
-        })
+        ...toUpdate,
+        id: onboarding.id
+      })
       : await sellerService.createSellerOnboardings(toUpdate)
 
     return new StepResponse(updatedOnboarding)

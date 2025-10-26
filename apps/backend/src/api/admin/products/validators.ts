@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { AdditionalData } from '@medusajs/framework/types'
 import { AdminGetProductsParams } from '@medusajs/medusa/api/admin/products/validators'

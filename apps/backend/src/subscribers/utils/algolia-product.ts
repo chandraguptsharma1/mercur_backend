@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { MedusaContainer } from '@medusajs/framework'
 import {
@@ -80,10 +80,10 @@ async function selectProductSeller(
 
   return product
     ? {
-        id: product.seller_id,
-        handle: product.seller.handle,
-        store_status: product.seller.store_status
-      }
+      id: product.seller_id,
+      handle: product.seller.handle,
+      store_status: product.seller.store_status
+    }
     : null
 }
 
@@ -139,9 +139,9 @@ export async function findAndTransformAlgoliaProducts(
     ],
     filters: ids.length
       ? {
-          id: ids,
-          status: 'published'
-        }
+        id: ids,
+        status: 'published'
+      }
       : { status: 'published' }
   })
 

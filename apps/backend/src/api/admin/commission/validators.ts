@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import z from 'zod'
 
 import { MedusaError } from '@medusajs/framework/utils'
 import { createFindParams } from '@medusajs/medusa/api/utils/validators'
@@ -192,14 +192,14 @@ export const validateCommissionRule = (obj: AdminCreateCommissionRuleType) => {
   const errors = [
     obj.reference === 'seller' && !obj.reference_id.startsWith('sel'),
     obj.reference === 'product_category' &&
-      !obj.reference_id.startsWith('pcat'),
+    !obj.reference_id.startsWith('pcat'),
     obj.reference === 'product_type' && !obj.reference_id.startsWith('ptyp'),
     obj.reference === 'seller+product_type' &&
-      (!obj.reference_id.split('+')[0].startsWith('sel') ||
-        !obj.reference_id.split('+')[1].startsWith('ptyp')),
+    (!obj.reference_id.split('+')[0].startsWith('sel') ||
+      !obj.reference_id.split('+')[1].startsWith('ptyp')),
     obj.reference === 'seller+product_category' &&
-      (!obj.reference_id.split('+')[0].startsWith('sel') ||
-        !obj.reference_id.split('+')[1].startsWith('pcat'))
+    (!obj.reference_id.split('+')[0].startsWith('sel') ||
+      !obj.reference_id.split('+')[1].startsWith('pcat'))
   ]
 
   if (errors.find((v) => v)) {
